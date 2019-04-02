@@ -1,6 +1,5 @@
 # orbyter-ml-dev:1.2 
 FROM manifoldai/orbyter-base-sys:1.0
-#RUN pip install --upgrade pip &&\
 COPY . /build
 WORKDIR /build
 RUN pip install wheel &&\
