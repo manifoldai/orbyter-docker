@@ -1,10 +1,13 @@
 # orbyter-ml-dev:1.2 
 FROM manifoldai/orbyter-base-sys:1.0
-WORKDIR /mnt
-RUN pip install --upgrade pip \
-    pip install wheel \
-    pip install setuptools \
-    pip install pipenv \
-    pipenv install --three --dev --system \
+#RUN pip install --upgrade pip &&\
+COPY . /build
+WORKDIR /build
+RUN pip install wheel &&\
+    pip install setuptools &&\
+    pip install pipenv &&\
+    pipenv install --three --dev --system &&\
     jupyter contrib nbextension install --user
 ENV PYTHONPATH="/mnt:${PYTHONPATH}" 
+WORKDIR /mnt
+RUN rm -rf /build
