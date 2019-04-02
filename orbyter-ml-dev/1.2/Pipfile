@@ -29,6 +29,8 @@ seaborn = "*"
 sklearn = "*"
 tornado = "*"
 xgboost = "*"
+coloredlogs = "*"
+black = "*"
 
 [requires]
 python_version = "3.6"
