@@ -1,0 +1,34 @@
+[[source]]
+url = "https://pypi.python.org/simple"
+verify_ssl = true
+
+[dev-packages]
+flake8 = "*"
+ipdb = "*"
+pytest = "*"
+
+[packages]
+autopep8 = "*"
+boto3 = "*"
+cloudpickle = "*"
+dask = "*"
+distributed = "*"
+jupyter = "*"
+jupyter-contrib-nbextensions = "*"
+jsonlines = "*"
+keras = "*"
+lightgbm = "*"
+matplotlib = "*"
+pandas = "*"
+plotly = "*"
+psycopg2 = "*"
+pyarrow = "*"
+python-dotenv = "*"
+scipy = "*"
+seaborn = "*"
+sklearn = "*"
+tornado = "*"
+xgboost = "*"
+
+[requires]
+python_version = "3.6"
