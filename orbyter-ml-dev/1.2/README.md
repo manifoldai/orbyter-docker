@@ -11,36 +11,55 @@ docker run -it manifoldai/orbyter-ml-dev:1.2 -v $PWD:/mnt bash
 
 ## Release Notes:
 
+In 1.2, we are switching from `pipenv` installs to `pip` install of a requirements file. 
+While `pipenv` is a useful tool for building up virtual environments from the group up,
+it can be difficult to add additional packages to a .lock file that hasn't been update
+recently, which causes issues with the docker workflow. 
+
 ### Python package updates
 
-Added: black, coloredlogs, ipdb
-Removed: ptitprince, keras
+Added: black, coloredlogs, isort, shap
+
+Removed: ptitprince, keras, zdict
 
 ### System
 
 * /mnt added to PYTHONPATH
 
 ## Image overview
-For a complete list all packages, see Pipfile and Pipfile.lock. Here is a summary of
+For a complete list all packages, run `pip freeze` in a container. Below is a summary of
 the useful packages for ML development.
+
+System:
 
 * Ubuntu 16.04.4 LTS
 * Python 3.6.5
+
+Packages:
+
 * black==19.3b0
+* boto3==1.9.127
 * coloredlogs==10.0
-* boto3==1.9.32
-* dask==0.19.4
-* distributed==1.23.3
-* flake8==3.6.0
+* dask==1.1.5
+* distributed==1.26.1
+* flake8==3.7.7
 * ipdb==0.12
-* ipython==7.4.0
+* isort==4.3.16
+* jsonlines==1.2.0
 * jupyter==1.0.0
-* numpy==1.15.3
+* jupyter-contrib-nbextensions==0.5.1
 * lightgbm==2.2.3
+* matplotlib==3.0.3
+* more-itertools==7.0.0
+* numpy==1.16.2
 * pandas==0.24.2
-* plotly==3.3.0
-* pyarrow==0.11.1
-* scikit-learn==0.20.0
-* scipy==1.1.0
+* plotly==3.7.1
+* pluggy==0.9.0
+* pyarrow==0.13.0
+* pytest==4.4.0
+* python-dotenv==0.10.1
+* scikit-learn==0.20.3
+* scipy==1.2.1
+* shap==0.28.5
 * seaborn==0.9.0
-* xgboost==0.80
+* xgboost==0.82

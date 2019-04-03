@@ -33,11 +33,4 @@ Docker image for DL development.
 
 The directories in the top level contain the different images. Within each directory are subdirectories of version releases, which should match [Manifold's Dockerhub](https://hub.docker.com/u/manifoldai/). For example, the Dockerfile for manifoldai/orbyter-ml-dev:1.2 is orbyter-ml-dev/1.2/Dockerfile. 
 
-When build a new release, build a new directory. To install new packages, the Pipfile.lock needs to be updated. To update the Pipenv.lock, install packages in a running container using
-
-`
-pipenv install [my_package]
-`
-
-If it succeeds, the Pipfile *and* the Pipfile.lock will be updated.
-`
+When build a new release, build a new directory. Update a requirements file only with top level modules. 
