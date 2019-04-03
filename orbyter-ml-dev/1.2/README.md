@@ -14,7 +14,7 @@ docker run -it manifoldai/orbyter-ml-dev:1.2 -v $PWD:/mnt bash
 ### Python package updates
 
 Added: black, coloredlogs, ipdb
-Removed: ptitprince
+Removed: ptitprince, keras
 
 ### System
 
@@ -32,7 +32,6 @@ the useful packages for ML development.
 * dask==0.19.4
 * distributed==1.23.3
 * flake8==3.6.0
-* Keras==2.2.4
 * ipdb==0.12
 * ipython==7.4.0
 * jupyter==1.0.0
