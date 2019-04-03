@@ -5,8 +5,7 @@ WORKDIR /build
 RUN pip install --upgrade pip
 RUN pip install wheel &&\
     pip install setuptools &&\
-    pip install pipenv &&\
-    pipenv install --three --dev --system &&\
+    pip install -r requirements_slim.txt &&\
     jupyter contrib nbextension install --user
 ENV PYTHONPATH="/mnt:${PYTHONPATH}" 
 WORKDIR /mnt
