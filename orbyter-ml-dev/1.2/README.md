@@ -5,6 +5,7 @@ Dockerfile for [manifoldai/orbyter-ml-dev:1.2](https://hub.docker.com/r/manifold
 ## Usage
 
 To run a bash shell, 
+
 `
 docker run -it manifoldai/orbyter-ml-dev:1.2 -v $PWD:/mnt bash
 `
