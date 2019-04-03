@@ -2,6 +2,7 @@
 FROM manifoldai/orbyter-base-sys:1.0
 COPY . /build
 WORKDIR /build
+RUN pip install --upgrade pip
 RUN pip install wheel &&\
     pip install setuptools &&\
     pip install pipenv &&\
