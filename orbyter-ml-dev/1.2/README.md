@@ -18,7 +18,7 @@ recently, which causes issues with the docker workflow.
 
 ### Python package updates
 
-Added: black, coloredlogs, isort, shap
+Added: black, coloredlogs, isort, shap, cufflinks, xarray, fire
 
 Removed: ptitprince, keras, zdict
 
@@ -39,9 +39,12 @@ Packages:
 
 * black==19.3b0
 * boto3==1.9.127
+* Click==7.0
 * coloredlogs==10.0
+* cufflinks==0.14.6
 * dask==1.1.5
 * distributed==1.26.1
+* fire==0.1.3
 * flake8==3.7.7
 * ipdb==0.12
 * isort==4.3.16
