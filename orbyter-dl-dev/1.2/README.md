@@ -1,13 +1,13 @@
-# manifoldai/orbyter-ml-dev:1.2
+# manifoldai/orbyter-dl-dev:1.2
 
-Dockerfile for [manifoldai/orbyter-ml-dev:1.2](https://hub.docker.com/r/manifoldai/orbyter-ml-dev)
+Dockerfile for [manifoldai/orbyter-dl-dev:1.2](https://hub.docker.com/r/manifoldai/orbyter-dl-dev): Manifold's DL docker image.
 
 ## Usage
 
 To run a bash shell, 
 
 `
-docker run -it manifoldai/orbyter-ml-dev:1.2 -v $PWD:/mnt bash
+docker run -it manifoldai/orbyter-dl-dev:1.2 -v $PWD:/mnt bash
 `
 
 ## Release Notes:
@@ -19,9 +19,9 @@ recently, which causes issues with the docker workflow.
 
 ### Python package updates
 
-Added: black, coloredlogs, isort, shap, cufflinks, xarray, fire
+Added: black, coloredlogs, isort, shap, cufflinks, xarray, fire, pytorch, fastai
 
-Removed: ptitprince, keras, zdict
+Removed: ptitprince
 
 ### System
 
@@ -45,8 +45,10 @@ Packages:
 * cufflinks==0.14.6
 * dask==1.1.5
 * distributed==1.26.1
+* fastai==1.0.51
 * fire==0.1.3
 * flake8==3.7.7
+* Keras==2.2.4
 * ipdb==0.12
 * isort==4.3.16
 * jsonlines==1.2.0
@@ -64,6 +66,8 @@ Packages:
 * python-dotenv==0.10.1
 * scikit-learn==0.20.3
 * scipy==1.2.1
-* shap==0.28.5
 * seaborn==0.9.0
+* tensorflow==1.13.1
+* torch==1.0.1
+* xarray==0.11.3
 * xgboost==0.82
