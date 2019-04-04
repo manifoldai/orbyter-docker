@@ -2,6 +2,7 @@
 FROM manifoldai/orbyter-base-sys:1.0
 COPY . /build
 WORKDIR /build
+# Separely split pip to avoid pip install main issue
 RUN pip install --upgrade pip
 RUN pip install wheel &&\
     pip install setuptools &&\

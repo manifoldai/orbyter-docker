@@ -1,6 +1,7 @@
 FROM manifoldai/orbyter-base-sys-dl:1.0
 COPY . /build
 WORKDIR /build
+# Separely split pip to avoid pip install main issue
 RUN pip install --upgrade pip
 RUN pip install wheel &&\
     pip install setuptools &&\
@@ -13,9 +14,9 @@ RUN pip install wheel &&\
 # stackoverflow.com/questions/42386097/python-add-apt-repository-importerror-no-module-named-apt-pkg)
 # The following is a fix for this: use python3.5 to run. Without this we can't add new ppas
 # This must be after pipenv installs above
-RUN sed -i '1 s/^.*$/\# \! \/usr\/bin\/python3.5/' /usr/bin/add-apt-repository
-RUN /usr/bin/python3.5 /usr/bin/add-apt-repository -y ppa:jonathonf/ffmpeg-3
-RUN apt-get update && \
+RUN sed -i '1 s/^.*$/\# \! \/usr\/bin\/python3.5/' /usr/bin/add-apt-repository &&\
+    /usr/bin/python3.5 /usr/bin/add-apt-repository -y ppa:jonathonf/ffmpeg-3  &&\
+    apt-get update && \
     apt-get install -y ffmpeg
 # END ffmpeg install specific lines
 # Python installs
