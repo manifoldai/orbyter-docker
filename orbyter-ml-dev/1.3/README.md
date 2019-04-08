@@ -22,7 +22,7 @@ We have added mlflow for experiment tracking.
 
 ### Python package updates
 
-Added: mlflow
+Added: mlflow, sqlalchemy, psycopg
 
 ## Image overview
 
@@ -58,6 +58,7 @@ Packages:
 * pandas==0.24.2
 * plotly==3.7.1
 * pluggy==0.9.0
+* psycopg2==2.8.1
 * pyarrow==0.13.0
 * pytest==4.4.0
 * python-dotenv==0.10.1
@@ -65,4 +66,5 @@ Packages:
 * scipy==1.2.1
 * shap==0.28.5
 * seaborn==0.9.0
+* SQLAlchemy==1.3.2
 * xgboost==0.82

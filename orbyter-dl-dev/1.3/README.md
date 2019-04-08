@@ -22,7 +22,7 @@ We have added mlflow for experiment tracking.
 
 ### Python package updates
 
-Added: mlflow
+Added: mlflow, sqlalchemy, psycopg
 
 ## Image overview
 For a complete list all packages, run `pip freeze` in a container. Below is a summary of
@@ -59,11 +59,13 @@ Packages:
 * pandas==0.24.2
 * plotly==3.7.1
 * pluggy==0.9.0
+* psycopg2==2.8.1
 * pyarrow==0.13.0
 * pytest==4.4.0
 * python-dotenv==0.10.1
 * scikit-learn==0.20.3
 * scipy==1.2.1
+* SQLAlchemy==1.3.2
 * seaborn==0.9.0
 * tensorflow==1.13.1
 * torch==1.0.1

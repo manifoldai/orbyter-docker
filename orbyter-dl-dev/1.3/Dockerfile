@@ -3,7 +3,9 @@ COPY . /build
 WORKDIR /build
 # Separely split pip to avoid pip install main issue
 RUN pip install --upgrade pip
-RUN pip install wheel &&\
+RUN apt-get update &&\
+    apt-get install -y libpq-dev python3-dev &&\
+    pip install wheel &&\
     pip install setuptools &&\
     pip install -r requirements.txt &&\
     jupyter contrib nbextension install --user
