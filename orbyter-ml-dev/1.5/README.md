@@ -16,7 +16,7 @@ We have added dask complete, shap, bokeh.
 
 ### Python package updates
 
-Added: daskp[complete], shap, bokeh
+Added: dask[complete], shap, bokeh
 
 ## Image overview
 
