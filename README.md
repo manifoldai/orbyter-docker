@@ -32,7 +32,7 @@ Docker image for DL development.
 
 ## Release info
 
-[The](The) directories in the top level contain the different images. Within each directory are subdirectories of version releases, which should match [Manifold's Dockerhub](https://hub.docker.com/u/manifoldai/). For example, the Dockerfile for manifoldai/orbyter-ml-dev:1.2 is orbyter-ml-dev/1.2/Dockerfile. 
+The directories in the top level contain the different images. Within each directory are subdirectories of version releases, which should match [Manifold's Dockerhub](https://hub.docker.com/u/manifoldai/). For example, the Dockerfile for manifoldai/orbyter-ml-dev:1.2 is orbyter-ml-dev/1.2/Dockerfile. 
 
 
 ### Building a new release
