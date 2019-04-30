@@ -60,7 +60,7 @@ Packages:
 * scipy==1.2.1
 * shap==0.28.5
 * Sphinx==2.0.1 
-* streamlit==0.24.0
+* streamlit==0.34.0
 * SQLAlchemy==1.3.2
 * seaborn==0.9.0
 * tensorflow==1.13.1
