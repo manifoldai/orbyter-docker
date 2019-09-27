@@ -37,7 +37,13 @@ The directories in the top level contain the different images. Within each direc
 
 ### Building a new release
 
-When building a new release, make a new directory. Update a requirements file only with top level modules. To build the image, `cd` into the new release image directory and run
+When building a new release, make a new directory. Typically, new releases update the package versions in requirements.txt and rebuild the image. To find out which packages are outdated, you can use this command
+
+`pip list --outdated`
+
+You can then update the requirements.txt with the versions returned by the above command.
+
+To build the image, `cd` into the new release image directory and run
 
 `
 docker build -t local_image_name:local_tag .
