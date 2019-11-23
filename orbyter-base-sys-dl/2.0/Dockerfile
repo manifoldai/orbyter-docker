@@ -10,7 +10,6 @@ RUN apt-get update -qq && \
     build-essential \
     libssl-dev \
     libffi-dev \
-    libpq-dev \
     python3.7-dev \
     vim \
     emacs \
