@@ -1,6 +1,5 @@
 from ubuntu:18.04
-# This part below should be same as in orbyter-base-sys-dl/1.x/Dockerfile
-COPY . /build
+# This part below should be same as in orbyter-base-sys-dl/2.x/Dockerfile
 WORKDIR /build
 ENV LC_ALL=C.UTF-8 \
     LANG=C.UTF-8
@@ -20,7 +19,7 @@ RUN apt-get update -qq && \
     curl \
     cmake \
     htop 
-# clean up
+# clean up. Need to change python3 to 3.7 or pip installs get confused
 RUN rm -rf /var/lib/apt/lists/* && \
     rm -f /usr/bin/python3 && \
     rm -f /usr/bin/python3.6* && \
@@ -29,7 +28,7 @@ RUN rm -rf /var/lib/apt/lists/* && \
     ln -s /usr/bin/python3.7 /usr/bin/python && \
     ln -s /usr/bin/pip3 /usr/bin/pip && \
     rm -rf ~/.cache
-## install pip libraries need for most installs
+## install pip libraries needed for most installs
 RUN pip install wheel && \
     pip install setuptools
 WORKDIR /
