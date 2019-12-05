@@ -14,6 +14,7 @@ RUN apt-get update -qq && \
     vim \
     emacs \
     screen \
+    git \
     wget \
     curl \
     cmake \
