@@ -1,10 +1,10 @@
-# 
-This is the Dockerfile for manifoldai/orbyter-base-sys-dl:1.1
+#  orbyter-base-sys-dl:2.0
 
-Release Notes:
-This is similar to manifoldai/orbyter-base-sys,  but uses nvidia cuda 10.0 image as the base image.
+This is the Dockerfile for manifoldai/orbyter-base-sys-dl:2.0.  This is similar to
+manifoldai/orbyter-base-sys,  but uses nvidia cuda 10.0 image as the base image.
 
-General development tools: vim,  emacs,  screen,  wget
-Python: 3.7
-OS: Ubuntu 18.04
+
+## Release Notes
+Updated python to 3.7
+Updated Ubuntu 18.04
 For a complete list, see the Dockerfile in this directory.
