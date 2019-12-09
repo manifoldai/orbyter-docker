@@ -5,7 +5,7 @@ ENV LC_ALL=C.UTF-8 \
     LANG=C.UTF-8
 RUN apt-get update -qq && \
     apt-get install -qqy --no-install-recommends \
-    python3.7 \
+    python3.7=3.7.5-2~18.04 \
     python3-pip \
     build-essential \
     libssl-dev \
@@ -29,7 +29,8 @@ RUN rm -rf /var/lib/apt/lists/* && \
     ln -s /usr/bin/pip3 /usr/bin/pip && \
     rm -rf ~/.cache
 ## install pip libraries needed for most installs
-RUN pip install wheel && \
-    pip install setuptools
+RUN pip install wheel==0.33.6 && \
+    pip install setuptools==42.0.2 && \
+    pip install -U pip==19.3.1
 WORKDIR /
 RUN rm -rf /build
