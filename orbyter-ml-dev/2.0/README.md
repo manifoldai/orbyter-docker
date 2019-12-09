@@ -23,6 +23,7 @@ cufflinks==0.16
 #### Updated
 
 streamlit==0.50.1
+notebook==6.0.2
 
 ## Added
 
@@ -60,6 +61,7 @@ System:
 * matplotlib==3.1.1
 * mlflow==1.2.0
 * more-itertools==7.2.0
+* notebook==6.0.2
 * numpy==1.17.2
 * pandas==0.25.1
 * plotly==4.1.1
