@@ -3,7 +3,6 @@ FROM manifoldai/orbyter-base-sys:2.0
 COPY . /build
 WORKDIR /build
 # Separely split pip to avoid pip install main issue
-RUN pip install --upgrade pip
 RUN apt-get update &&\
     apt-get install -y libpq-dev &&\
     pip install -r requirements.txt &&\
