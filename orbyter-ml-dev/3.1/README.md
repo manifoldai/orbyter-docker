@@ -19,7 +19,7 @@ Added JupyterLab extensions. TQDM works in JupyterLab notebooks now.
 
 #### Updated
 
-No packages were updated other than adding the JupyterLab extensions.
+Update mlflow to 1.12.1. Added JupyterLab extensions.
 
 ## Image overview
 
@@ -48,7 +48,7 @@ System:
 * jupyterlab==2.2.9
 * lightgbm==3.0.0
 * matplotlib==3.3.2
-* mlflow==1.11.0
+* mlflow==1.12.1
 * more-itertools==8.5.0
 * notebook==6.1.4
 * numpy==1.19.2
