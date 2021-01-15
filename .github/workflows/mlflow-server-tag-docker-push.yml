@@ -32,5 +32,5 @@ jobs:
           context: orbyter-mlflow-server
           push: true
           tags: |
-            manifoldai/orbyter-mws-ci-test:latest
-            manifoldai/orbyter-mws-ci-test:${{ steps.get_version.outputs.VERSION }}
+            manifoldai/orbyter-mlflow-server:latest
+            manifoldai/orbyter-mlflow-server:${{ steps.get_version.outputs.VERSION }}

@@ -32,5 +32,5 @@ jobs:
           context: orbyter-base-sys
           push: true
           tags: |
-            manifoldai/orbyter-mws-ci-test:latest
-            manifoldai/orbyter-mws-ci-test:${{ steps.get_version.outputs.VERSION }}
+            manifoldai/orbyter-base-sys:latest
+            manifoldai/orbyter-base-sys:${{ steps.get_version.outputs.VERSION }}

@@ -32,5 +32,5 @@ jobs:
           context: orbyter-ml-dev
           push: true
           tags: |
-            manifoldai/orbyter-mws-ci-test:latest
-            manifoldai/orbyter-mws-ci-test:${{ steps.get_version.outputs.VERSION }}
+            manifoldai/orbyter-ml-dev:latest
+            manifoldai/orbyter-ml-dev:${{ steps.get_version.outputs.VERSION }}
