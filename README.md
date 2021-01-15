@@ -6,25 +6,33 @@ customers (internal and external).
 
 ## Docker images
 
-The various docker images are tagged by their repository name under their parent directory. E.g., The Dockerfile for docker-ml-dev:1.0 corresponds to docker-ml-dev/1.0/Dockerfile
-
 ### docker-ml-dev
 
-This is currently the base development image used in conjunction with [docker-cookiecutter-datascience](https://github.com/manifoldai/docker-cookiecutter-data-science).
+This is currently the base development image used in conjunction with
+[docker-cookiecutter-datascience](https://github.com/manifoldai/docker-cookiecutter-data-science).
+This is no longer supported.
 
 ### orbyter-base-sys
 
-Base docker image for machine learning development in python. ML images are build on top of this, and this should not be used directly for development. This base image contains basic tools like vim, emacs, curl, and python, but does not install any ML specific packages.
+Base docker image for machine learning development in python. ML images are build on top
+of this, and this should not be used directly for development. This base image contains
+basic tools like vim, emacs, curl, and python, but does not install any ML specific
+packages.
 
 
 ### orbyter-base-sys-dl
 
-Base docker image for deep learning development in python, which contains CUDA libraries. DL images are build on top of this, and this should not be used directly for development. This base image, like orbyte-base-sys, contains basic tools like vim, emacs, curl, and python. Because it contains the CUDA libraries, it is compatible with many deep learning frameworks like pytorch.
+Base docker image for deep learning development in python, which contains CUDA
+libraries. DL images are build on top of this, and this should not be used directly for
+development. This base image, like orbyte-base-sys, contains basic tools like vim,
+emacs, curl, and python. Because it contains the CUDA libraries, it is compatible with
+many deep learning frameworks like pytorch.
 
 
 ### orbyter-ml-dev
 
-Docker image for ML development in python, which contains the essentially tools like jupyter, pandas, numpy, and scikit-learn.
+Docker image for ML development in python, which contains the essentially tools like
+jupyter, pandas, numpy, and scikit-learn.
 
 ### orbyter-dl-dev
 
@@ -37,11 +45,14 @@ The directories in the top level contain the different images. Within each direc
 
 ### Building a new release
 
-When building a new release, make a new directory. Typically, new releases update the package versions in requirements.txt and rebuild the image. To find out which packages are outdated, you can use this command
+When building a new release, make a new directory. Typically, new releases update the
+package versions in requirements.txt and rebuild the image. To find out which packages
+are outdated, you can use this command
 
 `pip list --outdated`
 
-You can then update the requirements.txt with the versions returned by the above command.
+You can then update the requirements.txt with the versions returned by the above
+command.
 
 To build the image, `cd` into the new release image directory and run
 
