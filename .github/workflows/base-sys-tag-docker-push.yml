@@ -2,7 +2,7 @@ name: Publish Docker image
 on:
   push:
     tags:
-      - orbyter-base-sys*
+      - orbyter-base-sys-[0-9]*
 jobs:
   push_to_registry:
     name: Push Docker image to Docker Hub
