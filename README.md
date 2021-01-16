@@ -1,8 +1,71 @@
 # manifold/orbyter-docker 
 
-Manifold's Orbyter docker image toolset is to help Data Science teams easily move to a container-first workflow from local development to serving in production settings. The goal of these
-tools is to bring DevOps best practices to the Data Science community to increase productivity and quality of delivered worked to
-customers (internal and external).
+Manifold's Orbyter docker image toolset is to help Data Science teams easily move to a
+container-first workflow from local development to serving in production settings. The
+goal of these tools is to bring DevOps best practices to the Data Science community to
+increase productivity and quality of delivered worked to customers (internal and
+external). Several Dockerhub repositories are represented in this code repository:
+`manifoldai/docker-ml-dev`, `manifoldai/docker-dl-dev`, ...., all of which are listed
+below.
+
+## General structure
+
+After commit `e039c36`, this repo was drastically reorganized. `<=e039c36`, each version
+of each docker repositories image was given as a subfolder. E.g, 
+
+```
+orbyter-ml-dev/
+├── 3.1
+│   ├── Dockerfile
+│   ├── README.md
+│   └── requirements.txt
+└── 3.2
+    ├── Dockerfile
+    ├── README.md
+    └── requirements.txt
+
+```
+
+While this structure provided nice auditability, it did not lend itself to continuous
+deployment of new images, didn't scale well, and was challenging to code review.
+Therefore, after commit `>e039c36`, we organized to only contain the latest version of
+each docker repo.
+
+Each docker repository is a folder, and within that folder, is a specific
+file structure
+```
+docker-repo/ # e.g, docker-ml-dev
+├── Dockerfile
+├── README.md
+├── VERSION
+└── requirements.txt
+```
+
+The tip of master contains the latest version of each docker image (`VERSION`). Each
+repo VERSION is given a specific tag. To audit/compare previous versions, you need to
+reference the image by its git tag.
+
+## Tagging
+
+A given image release marked by it's git tag the tagging convention is
+`<repo-name>-<version`. E.g, the git tag `tag: orbyter-ml-dev:3.2` corresponds to
+version `3.2` of `orbyter-ml-dev`. Pushing a tag to github will trigger a deployment of
+that image to docker hub.
+
+## Image release steps
+
+For simplicity, lets just focus on a single image, but the steps are the same for all of
+them. Let's say we are make creating version `3.3` of `orbyter-ml-dev`.
+
+1. Create new branch, e.g, `mws/orbyter-ml-dev-3.3`
+2. Make changes to `Dockerfile`, `requirements.txt`, `README.md`, and bump `VERSION` to
+   `3.3`. Note, you can test you new build by running `make build-orbyter-ml-dev`.
+3. Create a pull request back into master.
+4. When changes are merged to `master`, get the latest commit: `git checkout master`,
+   `git pull`
+5. Tag the code: `make release-orbyter-ml-dev`. This will push the tag to origin and
+   kick-off a GitHub actions job that will push two new images to
+   `manifoldai/orbyter-ml-dev:3.3` and `manifoldai/orbyter-ml-dev:latest`.
 
 ## Docker images
 
@@ -10,7 +73,7 @@ customers (internal and external).
 
 This is currently the base development image used in conjunction with
 [docker-cookiecutter-datascience](https://github.com/manifoldai/docker-cookiecutter-data-science).
-This is no longer supported.
+This is no longer supported and there is no continuous deployment.
 
 ### orbyter-base-sys
 
@@ -37,37 +100,3 @@ jupyter, pandas, numpy, and scikit-learn.
 ### orbyter-dl-dev
 
 Docker image for DL development. 
-
-## Release info
-
-The directories in the top level contain the different images. Within each directory are subdirectories of version releases, which should match [Manifold's Dockerhub](https://hub.docker.com/u/manifoldai/). For example, the Dockerfile for manifoldai/orbyter-ml-dev:1.2 is orbyter-ml-dev/1.2/Dockerfile. 
-
-
-### Building a new release
-
-When building a new release, make a new directory. Typically, new releases update the
-package versions in requirements.txt and rebuild the image. To find out which packages
-are outdated, you can use this command
-
-`pip list --outdated`
-
-You can then update the requirements.txt with the versions returned by the above
-command.
-
-To build the image, `cd` into the new release image directory and run
-
-`
-docker build -t local_image_name:local_tag .
-`
-
-To tag the local image to a remote repo (in order to push to docker hub) run:
-
-`
-docker tag local_image_name:local_tag remote_repo/remote_image_name:remote_tag 
-`
-
-And push to dockerhub
-
-`
-docker push remote_repo/remote_image_name:remote_tag 
-`
