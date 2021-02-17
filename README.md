@@ -59,7 +59,7 @@ them. Let's say we are make creating version `3.3` of `orbyter-ml-dev`.
 
 1. Create new branch, e.g, `mws/orbyter-ml-dev-3.3`
 2. Make changes to `Dockerfile`, `requirements.txt`, `README.md`, and bump `VERSION` to
-   `3.3`. Note, you can test you new build by running `make build-orbyter-ml-dev`.
+   `3.3`. Note, you can test you new build by running `make build-ml-dev`.
 3. Create a pull request back into master.
 4. When changes are merged to `master`, get the latest commit: `git checkout master`,
    `git pull`
