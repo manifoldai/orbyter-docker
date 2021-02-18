@@ -63,7 +63,7 @@ them. Let's say we are make creating version `3.3` of `orbyter-ml-dev`.
 3. Create a pull request back into master.
 4. When changes are merged to `master`, get the latest commit: `git checkout master`,
    `git pull`
-5. Tag the code: `make release-orbyter-ml-dev`. This will push the tag to origin and
+5. Tag the code: `make release-ml-dev`. This will push the tag to origin and
    kick-off a GitHub actions job that will push two new images to
    `manifoldai/orbyter-ml-dev:3.3` and `manifoldai/orbyter-ml-dev:latest`.
 
