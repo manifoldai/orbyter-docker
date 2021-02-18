@@ -13,11 +13,12 @@ Keras==2.3.0
 fire==0.4.0
 flake8==3.8.4
 ipdb==0.13.4
+ipython==7.20.0
 isort==5.7.0
 jsonlines==2.0.0
 jupyter==1.0.0
 jupyter-contrib-nbextensions==0.5.1
-jupyterlab==3.0.5
+jupyterlab==3.0.7
 lightgbm==3.1.1
 matplotlib==3.3.3
 mlflow==1.13.1
