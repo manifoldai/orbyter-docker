@@ -1,5 +1,5 @@
-# orbyter-ml-dev:1.2 
-FROM manifoldai/orbyter-base-sys:2.0
+# orbyter-mlflow_server:1.14.0 
+FROM manifoldai/orbyter-base-sys:3.2
 COPY . /build
 WORKDIR /build
 # Separely split pip to avoid pip install main issue
