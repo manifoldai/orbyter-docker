@@ -1,6 +1,6 @@
-# manifoldai/orbyter-ml-dev:3.2
+# manifoldai/orbyter-mlflow-server:1.14.0
 
-Dockerfile for [manifoldai/orbyter-mlflow-server:1.11.0](https://hub.docker.com/r/manifoldai/orbyter-ml-dev)
+Dockerfile for [manifoldai/orbyter-mlflow-server:1.14.0](https://hub.docker.com/r/manifoldai/orbyter-ml-dev)
 
 ## Usage
 
