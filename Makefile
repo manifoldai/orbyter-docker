@@ -35,3 +35,10 @@ build-mlflow-server: ## build orbyter-mlflow-server
 release-mlflow-server: ## tags git with orbyter-mlflow-server-<VERSION> and pushes to github.
 	git tag orbyter-mlflow-server-`cat orbyter-mlflow-server/VERSION`
 	git push --tags
+
+build-spark-dev: ## build orbyter-spark-dev
+	docker build -t orbyter-spark-dev orbyter-spark-dev
+
+release-spark-dev: ## tags git with orbyter-spark-dev-<VERSION> and pushes to github.
+	git tag orbyter-spark-dev-`cat orbyter-spark-dev/VERSION`
+	git push --tags
