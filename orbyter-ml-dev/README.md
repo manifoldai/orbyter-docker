@@ -13,59 +13,20 @@ docker run -it manifoldai/orbyter-ml-dev:3.3 bash
 
 ## Image overview
 
-For a complete list all packages, run `pip freeze` in a container. Below is a summary of
-the useful packages for ML development.
+For a complete list all packages, run `pip freeze` in a container. For a summary of
+the useful packages for ML development, see [requirements.txt].
 
 System:
 
 * Ubuntu 20.04 LTS
 * Python 3.8.5
 
-### Included Packages :
-* bayesian-optimization==1.2.0
-* black==20.8b1
-* boto3==1.17.10
-* click==7.1.2
-* coloredlogs==15.0
-* dask[complete]==2021.02.0
-* dask-ml==1.8.0
-* dvc==1.11.16
-* flake8==3.8.4
-* ipdb==0.13.4
-* ipython==7.20.0
-* isort==5.7.0
-* jsonlines==2.0.0
-* jupyter==1.0.0
-* jupyter-contrib-nbextensions==0.5.1
-* jupyterlab==3.0.7
-* lightgbm==3.1.1
-* matplotlib==3.3.4
-* mlflow==1.13.1
-* more-itertools==8.7.0
-* mypy==0.800
-* notebook==6.2.0
-* numpy==1.20.1
-* pandas==1.2.2
-* plotly==4.14.3
-* pluggy==0.13.1
-* psycopg2==2.8.6
-* pyarrow==3.0.0
-* pytest==6.2.2
-* python-dotenv==0.15.0
-* pytictoc==1.5.1
-* scikit-learn==0.24.1
-* scipy==1.6.0
-* seaborn==0.11.1
-* shap==0.38.1
-* Sphinx==3.5.1
-* SQLAlchemy==1.3.23
-* statsmodels==0.12.2
-* streamlit==0.76.0
-* tqdm==4.56.2
-* xarray==0.16.2
-* xgboost==1.3.3
 
 ## Release Notes:
+
+### 3.4
+
+Upgrade isort to `5.8.0` and add `line_profiler`.
 
 ### 3.3
 
