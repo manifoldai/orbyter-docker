@@ -1,4 +1,4 @@
-# orbyter-ml-dev:3.3
+# orbyter-ml-dev:3.5
 FROM manifoldai/orbyter-base-sys:3.2
 COPY . /build
 WORKDIR /build
@@ -7,7 +7,8 @@ RUN apt-get update && \
     pip install -r requirements.txt && \
     jupyter contrib nbextension install --user && \
     jupyter nbextension enable --py widgetsnbextension && \
-    jupyter labextension install @jupyter-widgets/jupyterlab-manager && \
+    jupyter labextension install \
+        @jupyter-widgets/jupyterlab-manager && \
     apt-get install -y --no-install-recommends \
         xvfb \
         libgtk2.0-0 \
