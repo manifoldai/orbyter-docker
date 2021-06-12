@@ -28,6 +28,7 @@ System:
 - coloredlogs==15.0
 - dask[complete]==2021.6.0
 - dask-cloudprovider==2021.3.1
+- dask-labextension==5.0.2
 - dask-ml==1.9.0
 - dvc==2.3.0
 - flake8==3.9.2
@@ -70,7 +71,7 @@ System:
 
 ### 3.5
 
-Updated `jupyterlab==3.0.16` and others, and added `dask-cloudprovider==2021.3.1` for distributed computing and `aquirdturtle-collapsible-headers==3.1.0` Jupyterlab extension for Jupyter notebook style folding of headers.
+Updated `jupyterlab==3.0.16` and others, added `dask-cloudprovider==2021.3.1` and `dask-labextension==5.0.2` for distributed computing, and `aquirdturtle-collapsible-headers==3.1.0` Jupyterlab extension for Jupyter notebook style folding of headers.
 
 #### Python package updates
 
@@ -78,6 +79,7 @@ Updated `jupyterlab==3.0.16` and others, and added `dask-cloudprovider==2021.3.1
 
 - aquirdturtle-collapsible-headings==3.1.0
 - dask-cloudprovider==2021.3.1
+- dask-labextension==5.0.2
 
 ##### Updated
 

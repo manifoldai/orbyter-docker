@@ -6,6 +6,7 @@ click==7.1.2
 coloredlogs==15.0
 dask[complete]==2021.6.0
 dask-cloudprovider==2021.3.1
+dask-labextension==5.0.2
 dask-ml==1.9.0
 dvc==2.3.0
 flake8==3.9.2
