@@ -44,7 +44,7 @@ System:
 - matplotlib==3.4.2
 - mlflow==1.17.0
 - more-itertools==8.8.0
-- mypy==0.902
+- mypy==0.812
 - notebook==6.4.0
 - numpy==1.20.3
 - pandas==1.2.4
@@ -69,7 +69,19 @@ System:
 
 ## Release Notes:
 
-### 3.5
+### 3.5.1
+
+The `orbyter-ml-dev:3.5` tag will point to this patched version.
+
+Roll back to `mypy==0.812` to avoid breaking changes made to how certain third party types are defined, which caused CI to fail for 3.5.0 images without additional packages.
+
+#### Python package updates
+
+##### Updated
+
+- mypy==0.812
+
+### 3.5.0
 
 Updated `jupyterlab==3.0.16` and others, added `dask-cloudprovider==2021.3.1` and `dask-labextension==5.0.2` for distributed computing, and `aquirdturtle-collapsible-headers==3.1.0` Jupyterlab extension for Jupyter notebook style folding of headers.
 
