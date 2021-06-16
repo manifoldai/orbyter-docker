@@ -22,7 +22,7 @@ line-profiler==3.3.0
 matplotlib==3.4.2
 mlflow==1.17.0
 more-itertools==8.8.0
-mypy==0.902
+mypy==0.812
 notebook==6.4.0
 numpy==1.20.3
 pandas==1.2.4
