@@ -1,14 +1,15 @@
 aquirdturtle-collapsible-headings==3.1.0
+awscli==1.19.49
 bayesian-optimization==1.2.0
 black==21.5b2
-boto3==1.17.92
+boto3==1.17.49
 click==7.1.2
 coloredlogs==15.0
 dask[complete]==2021.6.0
-dask-cloudprovider==2021.3.1
+dask-cloudprovider[aws]==2021.3.1
 dask-labextension==5.0.2
 dask-ml==1.9.0
-dvc==2.3.0
+dvc==2.4.1
 flake8==3.9.2
 ipdb==0.13.9
 ipython==7.24.1
@@ -33,6 +34,7 @@ pyarrow==4.0.1
 pytest==6.2.4
 python-dotenv==0.17.1
 pytictoc==1.5.2
+s3fs==2021.6.0
 scikit-learn==0.24.2
 scipy==1.6.3
 seaborn==0.11.1
