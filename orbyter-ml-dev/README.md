@@ -21,16 +21,17 @@ System:
 ### Included Packages :
 
 - aquirdturtle-collapsible-headings==3.1.0
+- awscli==1.19.49
 - bayesian-optimization==1.2.0
 - black==21.5b2
-- boto3==1.17.92
+- boto3==1.17.49
 - click==7.1.2
 - coloredlogs==15.0
 - dask[complete]==2021.6.0
-- dask-cloudprovider==2021.3.1
+- dask-cloudprovider[aws]==2021.3.1
 - dask-labextension==5.0.2
 - dask-ml==1.9.0
-- dvc==2.3.0
+- dvc==2.4.1
 - flake8==3.9.2
 - ipdb==0.13.9
 - ipython==7.24.1
@@ -55,6 +56,7 @@ System:
 - pytest==6.2.4
 - python-dotenv==0.17.1
 - pytictoc==1.5.2
+- s3fs==2021.6.1
 - scikit-learn==0.24.2
 - scipy==1.6.3
 - seaborn==0.11.1
@@ -69,9 +71,26 @@ System:
 
 ## Release Notes:
 
-### 3.5.1
+### 3.5.2
 
 The `orbyter-ml-dev:3.5` tag will point to this patched version.
+
+Updated `dask-cloudprovider` package to include the AWS subpackage and added the `s3fs` and `awscli` packages for better integration with AWS services. Updated `dvc==2.4.1` and reverted back to `boto3==1.17.49` for package compatibility reasons.
+
+#### Python package updates
+
+##### New
+
+- s3fs==2021.6.1
+- awscli==1.19.49
+
+##### Updated
+
+- boto3==1.17.49
+- dask-cloudprovider[aws]==2021.3.1
+- dvc==2.4.1
+
+### 3.5.1
 
 Roll back to `mypy==0.812` to avoid breaking changes made to how certain third party types are defined, which caused CI to fail for 3.5.0 images without additional packages.
 
