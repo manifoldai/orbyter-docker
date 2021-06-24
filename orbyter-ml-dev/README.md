@@ -33,6 +33,7 @@ System:
 - dask-ml==1.9.0
 - dvc==2.4.1
 - flake8==3.9.2
+- graphviz==0.16
 - ipdb==0.13.9
 - ipython==7.24.1
 - isort==5.8.0
@@ -61,6 +62,7 @@ System:
 - scipy==1.6.3
 - seaborn==0.11.1
 - shap==0.39.0
+- snakeviz==2.1.0
 - Sphinx==4.0.2
 - SQLAlchemy==1.4.18
 - statsmodels==0.12.2
@@ -70,6 +72,11 @@ System:
 - xgboost==1.4.2
 
 ## Release Notes:
+### 3.5.3
+
+The `orbyter-ml-dev:3.5` tag will point to this patched version.
+
+Added graphviz system library. Added graphviz and snakeviz python packages
 
 ### 3.5.2
 
