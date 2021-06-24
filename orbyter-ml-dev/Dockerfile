@@ -4,6 +4,7 @@ COPY . /build
 WORKDIR /build
 RUN apt-get update && \
     apt-get install -y libpq-dev && \
+    apt-get install -y graphviz && \
     pip install -r requirements.txt && \
     jupyter contrib nbextension install --user && \
     jupyter nbextension enable --py widgetsnbextension && \
