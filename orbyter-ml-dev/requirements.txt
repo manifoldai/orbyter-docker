@@ -18,7 +18,7 @@ isort==5.8.0
 jsonlines==2.0.0
 jupyter==1.0.0
 jupyter-contrib-nbextensions==0.5.1
-jupyterlab==3.0.16
+jupyterlab==3.0.17
 lightgbm==3.2.1
 line-profiler==3.3.0
 matplotlib==3.4.2
