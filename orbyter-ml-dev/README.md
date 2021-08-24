@@ -40,7 +40,7 @@ System:
 - jsonlines==2.0.0
 - jupyter==1.0.0
 - jupyter-contrib-nbextensions==0.5.1
-- jupyterlab==3.0.16
+- jupyterlab==3.0.17
 - lightgbm==3.2.1
 - line-profiler==3.3.0
 - matplotlib==3.4.2
@@ -72,15 +72,18 @@ System:
 - xgboost==1.4.2
 
 ## Release Notes:
-### 3.5.3
+
+### 3.5.4
 
 The `orbyter-ml-dev:3.5` tag will point to this patched version.
+
+Updates `jupyterlab` to 3.0.17 for security patch.
+
+### 3.5.3
 
 Added graphviz system library. Added graphviz and snakeviz python packages
 
 ### 3.5.2
-
-The `orbyter-ml-dev:3.5` tag will point to this patched version.
 
 Updated `dask-cloudprovider` package to include the AWS subpackage and added the `s3fs` and `awscli` packages for better integration with AWS services. Updated `dvc==2.4.1` and reverted back to `boto3==1.17.49` for package compatibility reasons.
 
