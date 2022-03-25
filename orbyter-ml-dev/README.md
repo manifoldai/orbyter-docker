@@ -1,76 +1,155 @@
-# manifoldai/orbyter-ml-dev:3.5
+# manifoldai/orbyter-ml-dev:4.0
 
-Dockerfile for [manifoldai/orbyter-ml-dev:3.5](https://hub.docker.com/r/manifoldai/orbyter-ml-dev)
+Dockerfile for [manifoldai/orbyter-ml-dev:4.0](https://hub.docker.com/r/manifoldai/orbyter-ml-dev)
 
 ## Usage
 
 To run a bash shell
 
-`docker run -it manifoldai/orbyter-ml-dev:3.5 bash`
+`docker run -it manifoldai/orbyter-ml-dev:4.0 bash`
 
 ## Image overview
 
 For a complete list all packages, run `pip freeze` in a container. For a summary of the useful packages for ML development, see [requirements.txt](requirements.txt).
 
-System:
+### System:
 
-- Ubuntu 20.04 LTS
-- Python 3.8.5
+- Debian 11.2 "Bullseye"
+- Python 3.10.4
+- Node.js v16
 
-### Included Packages :
+### Included Packages:
 
-- aquirdturtle-collapsible-headings==3.1.0
-- awscli==1.19.49
-- bayesian-optimization==1.2.0
-- black==21.5b2
-- boto3==1.17.49
-- click==7.1.2
-- coloredlogs==15.0
-- dask[complete]==2021.6.0
-- dask-cloudprovider[aws]==2021.3.1
-- dask-labextension==5.0.2
-- dask-ml==1.9.0
-- dvc==2.4.1
-- flake8==3.9.2
-- graphviz==0.16
-- ipdb==0.13.9
-- ipython==7.24.1
-- isort==5.8.0
-- jsonlines==2.0.0
-- jupyter==1.0.0
-- jupyter-contrib-nbextensions==0.5.1
-- jupyterlab==3.0.17
-- lightgbm==3.2.1
-- line-profiler==3.3.0
-- matplotlib==3.4.2
-- mlflow==1.23.1
-- more-itertools==8.8.0
-- mypy==0.812
-- notebook==6.4.0
-- numpy==1.20.3
-- pandas==1.2.4
-- plotly==4.14.3
-- pluggy==0.13.1
-- psycopg2==2.8.6
-- pyarrow==4.0.1
-- pytest==6.2.4
-- python-dotenv==0.17.1
-- pytictoc==1.5.2
-- s3fs==2021.6.1
-- scikit-learn==0.24.2
-- scipy==1.6.3
-- seaborn==0.11.1
-- shap==0.39.0
-- snakeviz==2.1.0
-- Sphinx==4.0.2
-- SQLAlchemy==1.4.18
-- statsmodels==0.12.2
-- streamlit==0.82.0
-- tqdm==4.61.0
-- xarray==0.18.2
-- xgboost==1.4.2
+```
+aquirdturtle-collapsible-headings==3.1.0
+awscli==1.22.82
+bayesian-optimization==1.2.0
+black==22.1.0
+nb-black==1.0.7
+boto3==1.21.27
+click==8.0.4
+coloredlogs==15.0.1
+dask[complete]==2022.3.0
+dask-labextension==5.2.0
+dask-ml==2022.1.22
+dvc==2.9.5
+flake8==4.0.1
+graphviz==0.19.1
+ipdb==0.13.9
+ipython==8.1.1
+isort==5.10.1
+jsonlines==3.0.0
+jupyter==1.0.0
+jupyter-contrib-nbextensions==0.5.1
+jupyterlab==3.3.2
+lightgbm==3.3.2
+line-profiler==3.5.0
+matplotlib==3.5.1
+mlflow==1.24.0
+more-itertools==8.12.0
+mypy==0.942
+notebook==6.4.10
+numpy==1.21.5
+pandas==1.4.1
+plotly==5.6.0
+pluggy==1.0.0
+psycopg==3.0.10
+pyarrow==7.0.0
+pytest==7.1.1
+python-dotenv==0.20.0
+pytictoc==1.5.2
+s3fs==0.4.2
+scikit-learn==1.0.2
+scipy==1.8.0
+seaborn==0.11.2
+shap==0.40.0
+snakeviz==2.1.1
+Sphinx==4.4.0
+SQLAlchemy==1.4.32
+statsmodels==0.13.2
+streamlit==1.8.0
+tqdm==4.63.1
+xarray==2022.3.0
+xgboost==1.5.2
+```
 
 ## Release Notes:
+
+### 4.0.0
+
+The `orbyer-ml-dev:4.0` tag will point to this version.
+
+Uses the base image `orbyter-base-sys:4.0`
+
+- Updates the OS image from Ubuntu 20.04 LTS to Debian 11.2 "Bullseye"
+- Updates Python version from 3.8.5 to 3.10.4
+- Updated Node.js version from v12 to v16
+
+#### Python package updates
+
+##### New
+
+Added extension for auto-formatting Jupyter notebooks with `black` using the cell magic: `%load_ext lab_black`
+
+```
+nb-black==1.0.7
+```
+
+##### Updated
+
+```
+awscli==1.22.82
+black==22.1.0
+boto3==1.21.27
+click==8.0.4
+coloredlogs==15.0.1
+dask[complete]==2022.3.0
+dask-labextension==5.2.0
+dask-ml==2022.1.22
+dvc==2.9.5
+flake8==4.0.1
+graphviz==0.19.1
+ipython==8.1.1
+isort==5.10.1
+jsonlines==3.0.0
+jupyterlab==3.3.2
+lightgbm==3.3.2
+line-profiler==3.5.0
+matplotlib==3.5.1
+mlflow==1.24.0
+more-itertools==8.12.0
+mypy==0.942
+notebook==6.4.10
+numpy==1.21.5
+pandas==1.4.1
+plotly==5.6.0
+pluggy==1.0.0
+psycopg==3.0.10
+pyarrow==7.0.0
+pytest==7.1.1
+python-dotenv==0.20.0
+s3fs==0.4.2
+scikit-learn==1.0.2
+scipy==1.8.0
+seaborn==0.11.2
+shap==0.40.0
+snakeviz==2.1.1
+Sphinx==4.4.0
+SQLAlchemy==1.4.32
+statsmodels==0.13.2
+streamlit==1.8.0
+tqdm==4.63.1
+xarray==2022.3.0
+xgboost==1.5.2
+```
+
+##### Removed
+
+Dask CloudProvider has been too slow to stay up-to-date and has ongoing issues with properly tearing down infrastructure.
+
+```
+dask-cloudprovider[aws]==2021.3.1
+```
 
 ### 3.5.5
 
