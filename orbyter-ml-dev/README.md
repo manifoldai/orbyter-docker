@@ -69,6 +69,35 @@ SQLAlchemy==1.4.32
 statsmodels==0.13.2
 streamlit==1.8.0
 tqdm==4.63.1
+types-bleach==4.1.5
+types-boto==2.49.10
+types-cachetools==5.0.0
+types-certifi==2021.10.8.1
+types-click==7.1.8
+types-colorama==0.4.9
+types-cryptography==3.3.18
+types-decorator==5.1.4
+types-docutils==0.18.0
+types-Flask==1.1.6
+types-futures==3.3.8
+types-itsdangerous==1.1.6
+types-Jinja2==2.11.9
+types-MarkupSafe==1.1.10
+types-mypy-extensions==0.4.14
+types-Pillow==9.0.8
+types-protobuf==3.19.15
+types-python-dateutil==2.8.10
+types-python-slugify==5.0.3
+types-pytz==2021.3.6
+types-PyYAML==6.0.5
+types-requests==2.27.14
+types-six==1.16.12
+types-tabulate==0.8.6
+types-toml==0.10.4
+types-tornado==5.1.1
+types-tzlocal==4.1.0
+types-urllib3==1.26.11
+types-Werkzeug==1.0.9
 xarray==2022.3.0
 xgboost==1.5.2
 ```
@@ -89,10 +118,40 @@ Uses the base image `orbyter-base-sys:4.0`
 
 ##### New
 
-Added extension for auto-formatting Jupyter notebooks with `black` using the cell magic: `%load_ext lab_black`
+- Added `mypy` type stubs for all currently-installed packages that are in the [Typeshed](https://github.com/python/typeshed)
+- Added extension for auto-formatting Jupyter notebooks with `black` using the cell magic: `%load_ext lab_black`
 
 ```
 nb-black==1.0.7
+types-bleach==4.1.5
+types-boto==2.49.10
+types-cachetools==5.0.0
+types-certifi==2021.10.8.1
+types-click==7.1.8
+types-colorama==0.4.9
+types-cryptography==3.3.18
+types-decorator==5.1.4
+types-docutils==0.18.0
+types-Flask==1.1.6
+types-futures==3.3.8
+types-itsdangerous==1.1.6
+types-Jinja2==2.11.9
+types-MarkupSafe==1.1.10
+types-mypy-extensions==0.4.14
+types-Pillow==9.0.8
+types-protobuf==3.19.15
+types-python-dateutil==2.8.10
+types-python-slugify==5.0.3
+types-pytz==2021.3.6
+types-PyYAML==6.0.5
+types-requests==2.27.14
+types-six==1.16.12
+types-tabulate==0.8.6
+types-toml==0.10.4
+types-tornado==5.1.1
+types-tzlocal==4.1.0
+types-urllib3==1.26.11
+types-Werkzeug==1.0.9
 ```
 
 ##### Updated
