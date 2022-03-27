@@ -10,8 +10,7 @@ To run a bash shell
 
 ## Image overview
 
-For a complete list all packages, run `pip freeze` in a container. For a summary of
-the useful packages for ML development, see [requirements.txt].
+For a complete list all packages, run `pip freeze` in a container. For a summary of the useful packages for ML development, see [requirements.txt](requirements.txt).
 
 System:
 
@@ -44,7 +43,7 @@ System:
 - lightgbm==3.2.1
 - line-profiler==3.3.0
 - matplotlib==3.4.2
-- mlflow==1.17.0
+- mlflow==1.23.1
 - more-itertools==8.8.0
 - mypy==0.812
 - notebook==6.4.0
@@ -73,9 +72,13 @@ System:
 
 ## Release Notes:
 
-### 3.5.4
+### 3.5.5
 
 The `orbyter-ml-dev:3.5` tag will point to this patched version.
+
+Updates `mlflow` to 1.23.1 for security patch.
+
+### 3.5.4
 
 Updates `jupyterlab` to 3.0.17 for security patch.
 

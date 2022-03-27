@@ -22,9 +22,13 @@ System:
 
 ## Release Notes:
 
-### 0.1.1
+### 0.1.2
 
 The `orbyter-spark-dev:0.1` image will point to this release.
+
+Updates `mlflow` to 1.23.1 for security patch.
+
+### 0.1.1
 
 Updates `jupyterlab` to 3.0.17 for security patch.
 
