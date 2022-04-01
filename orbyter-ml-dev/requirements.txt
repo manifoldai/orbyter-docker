@@ -22,7 +22,7 @@ jupyterlab==3.0.17
 lightgbm==3.2.1
 line-profiler==3.3.0
 matplotlib==3.4.2
-mlflow==1.17.0
+mlflow==1.23.1
 more-itertools==8.8.0
 mypy==0.812
 notebook==6.4.0

@@ -10,9 +10,13 @@ To run a bash shell
 
 ## Release Notes:
 
-### 3.2.1
+### 3.2.2
 
 The `orbyter-dl-dev:3.2` tag will point to this patched version.
+
+Updates `mlflow` to 1.23.1 for security patch.
+
+### 3.2.1
 
 Updates `jupyterlab` to 3.0.17 for security patch.
 
