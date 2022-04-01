@@ -25,7 +25,7 @@ matplotlib==3.4.2
 mlflow==1.23.1
 more-itertools==8.8.0
 mypy==0.812
-notebook==6.4.0
+notebook==6.4.1
 numpy==1.20.3
 pandas==1.2.4
 plotly==4.14.3
