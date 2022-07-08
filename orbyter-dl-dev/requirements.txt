@@ -11,7 +11,7 @@ dvc==1.11.13
 fire==0.4.0
 flake8==3.8.4
 ipdb==0.13.4
-ipython==7.20.0
+ipython==7.31.1
 isort==5.7.0
 jsonlines==2.0.0
 jupyter==1.0.0
