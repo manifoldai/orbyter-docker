@@ -1,8 +1,13 @@
 # manifoldai/orbyter-base-sys:4.0
 
-Dockerfile for [manifoldai/orbyter-base-sys:4.0](https://hub.docker.com/r/manifoldai/orbyter-base-sys)
+Dockerfile for [manifoldai/orbyter-base-sys:4.1](https://hub.docker.com/r/manifoldai/orbyter-base-sys)
 
 ## Release Notes
+
+### 4.1
+
+- Updated Python to 3.10.8
+- Started building images for amd64 _and_ arm64
 
 ### 4.0
 

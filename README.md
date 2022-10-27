@@ -59,14 +59,14 @@ packages.
 
 Base docker image for deep learning development in python, which contains CUDA
 libraries. DL images are build on top of this, and this should not be used directly for
-development. This base image, like orbyte-base-sys, contains basic tools like vim,
+development. This base image, like `orbyter-base-sys`, contains basic tools like vim,
 emacs, curl, and python. Because it contains the CUDA libraries, it is compatible with
-many deep learning frameworks like pytorch.
+many deep learning frameworks like PyTorch, but the platform architecture is limited.
 
 ### orbyter-ml-dev
 
-Docker image for ML development in python, which contains the essentially tools like
-jupyter, pandas, numpy, and scikit-learn.
+Docker image for ML development in python which contains essential tools like jupyter,
+pandas, numpy, and scikit-learn.
 
 ### orbyter-dl-dev
 
