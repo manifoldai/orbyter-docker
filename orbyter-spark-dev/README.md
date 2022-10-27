@@ -1,4 +1,4 @@
-# manifoldai/orbyter-spark-dev:0.1
+# manifoldai/orbyter-spark-dev:4.1
 
 Dockerfile for [manifoldai/orbyter-spark-dev](https://hub.docker.com/r/manifoldai/orbyter-spark-dev)
 
@@ -6,7 +6,7 @@ Dockerfile for [manifoldai/orbyter-spark-dev](https://hub.docker.com/r/manifolda
 
 To run a bash shell
 
-`docker run -it manifoldai/orbyter-spark-dev:latest bash`
+`docker run -it manifoldai/orbyter-spark-dev:4.1 bash`
 
 ## Image overview
 
