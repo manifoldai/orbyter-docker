@@ -15,13 +15,13 @@ __check_defined = $(if $(value $1),, $(error Undefined $1$(if $2, ($2))$(if $(va
 check_in_list = $(if $(filter $(TARGETS), $1),, $(error `target`$1 is not a valid target. Expected [$(TARGETS)]))
 
 
-build: ## Builds a Docker image locally.
+build: ## Builds a Docker image locally. Requires `target=image-name` argument.
 	@:$(call check_defined, target, expected target='image-name')
 	@:$(call check_in_list, $(target))
 	docker build -t $(target) $(target)
 
 
-release: ## Pushes version tag to Github, kicking off a build-and-push workflow.
+release: ## Pushes version tag to Github, kicking off a build-and-push workflow. Requires `target=image-name` argument.
 	@:$(call check_defined, target, expected target='image-name')
 	@:$(call check_in_list, $(target))
 	git tag $(target)-`cat $(target)/VERSION`
