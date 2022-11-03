@@ -1,12 +1,12 @@
-#  orbyter-base-sys-dl:3.2
+#  orbyter-base-sys-dl:4.1
 
-This is the Dockerfile for manifoldai/orbyter-base-sys-dl:3.2.  This is similar to
-manifoldai/orbyter-base-sys, but uses nvidia cuda 11.2.1 image as the base image.
+This is the Dockerfile for `manifoldai/orbyter-base-sys-dl`.  This is similar to
+manifoldai/orbyter-base-sys, but uses an NVIDIA CUDA 11.8 image as the base image.
 
+This docker file supports Deep Learning (DL) applications that require GPU support.
 
 ## Release Notes
-* Updated nvidia cuda base image to v11.2.1 and Ubuntu v20.04
-* Updated python to 3.8.5
-* Updated pip 20.3.3
-* Added nodejs v12
-* For a complete list, see the Dockerfile in this directory.
+* Check Docker file for NVIDIA information
+* Python 3.10, pip have been installed
+* For more information, see the Dockerfile in this directory.
+* For a changelog reflecting updates to the DL image, see [orbyter-dl-dev/README.md](../orbyter-dl-dev/README.md)

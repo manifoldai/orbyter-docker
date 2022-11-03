@@ -38,12 +38,12 @@ Let's say we are releasing version `3.5` of `orbyter-ml-dev`.
 
 1. Create a new branch, e.g, `mws/orbyter-ml-dev-3.5`
 2. Make changes in `orbyter-ml-dev/`: `Dockerfile`, `requirements.txt`, `README.md`, and bump `VERSION` to
-   `3.5`. Note, you can test your new build by running `make build-ml-dev` from the top-level directory
+   `3.5`. Note, you can test your new build by running `make build target=orbyter-ml-dev` from the top-level directory
 3. Create a pull request back into master.
 4. When changes are merged to `master`, get the latest commit: `git checkout master`,
    `git pull`
-5. Tag the code: `make release-ml-dev`. This will push the tag to origin and
-   kick-off a GitHub actions job that will push two new images to
+5. Tag the code: `make release target=orbyter-ml-dev`. This will push the tag to origin and
+   kick-off a GitHub actions job that will push two new images to Docker Hub:
    `manifoldai/orbyter-ml-dev:3.5` and `manifoldai/orbyter-ml-dev:latest`.
 
 ## Docker images
@@ -59,14 +59,14 @@ packages.
 
 Base docker image for deep learning development in python, which contains CUDA
 libraries. DL images are build on top of this, and this should not be used directly for
-development. This base image, like orbyte-base-sys, contains basic tools like vim,
+development. This base image, like `orbyter-base-sys`, contains basic tools like vim,
 emacs, curl, and python. Because it contains the CUDA libraries, it is compatible with
-many deep learning frameworks like pytorch.
+many deep learning frameworks like PyTorch, but the platform architecture is limited.
 
 ### orbyter-ml-dev
 
-Docker image for ML development in python, which contains the essentially tools like
-jupyter, pandas, numpy, and scikit-learn.
+Docker image for ML development in python which contains essential tools like jupyter,
+pandas, numpy, and scikit-learn.
 
 ### orbyter-dl-dev
 

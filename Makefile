@@ -1,44 +1,28 @@
-help:
-	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | sort | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-30s\033[0m %s\n", $$1, $$2}'
+help: ## For targets formatted as "target: ## description" ## Prints help menu.
+	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-30s\033[0m %s\n", $$1, $$2}'
 
-build-base-sys-dl: ## build orbyter-base-sys-dl
-	docker build -t orbyter-base-sys-dl orbyter-base-sys-dl
 
-release-base-sys-dl: ## tags git with orbyter-base-sys-dl-<VERSION> and pushes to github.
-	git tag orbyter-base-sys-dl-`cat orbyter-base-sys-dl/VERSION`
-	git push --tags
+TARGETS := \
+	orbyter-base-sys \
+	orbyter-base-sys-dl \
+	orbyter-dl-dev \
+	orbyter-ml-dev \
+	orbyter-mlflow-server \
+	orbyter-spark-dev 
 
-build-base-sys: ## build orbyter-base-sys
-	docker build -t orbyter-base-sys orbyter-base-sys
+check_defined = $(strip $(foreach 1,$1, $(call __check_defined,$1,$(strip $(value 2)))))
+__check_defined = $(if $(value $1),, $(error Undefined $1$(if $2, ($2))$(if $(value @), required by `$@')))
+check_in_list = $(if $(filter $(TARGETS), $1),, $(error `target`$1 is not a valid target. Expected [$(TARGETS)]))
 
-release-base-sys: ## tags git with orbyter-base-sys-<VERSION> and pushes to github.
-	git tag orbyter-base-sys-`cat orbyter-base-sys/VERSION`
-	git push --tags
 
-build-dl-dev: ## build orbyter-dl-dev
-	docker build -t orbyter-dl-dev orbyter-dl-dev
+build: ## Builds a Docker image locally. Requires `target=image-name` argument.
+	@:$(call check_defined, target, expected target='image-name')
+	@:$(call check_in_list, $(target))
+	docker build -t $(target) $(target)
 
-release-dl-dev: ## tags git with orbyter-dl-dev-<VERSION> and pushes to github.
-	git tag orbyter-dl-dev-`cat orbyter-dl-dev/VERSION`
-	git push --tags
 
-build-ml-dev: ## build orbyter-ml-dev
-	docker build -t orbyter-ml-dev orbyter-ml-dev
-
-release-ml-dev: ## tags git with orbyter-ml-dev-<VERSION> and pushes to github.
-	git tag orbyter-ml-dev-`cat orbyter-ml-dev/VERSION`
-	git push --tags
-
-build-mlflow-server: ## build orbyter-mlflow-server
-	docker build -t orbyter-mlflow-server orbyter-mlflow-server
-
-release-mlflow-server: ## tags git with orbyter-mlflow-server-<VERSION> and pushes to github.
-	git tag orbyter-mlflow-server-`cat orbyter-mlflow-server/VERSION`
-	git push --tags
-
-build-spark-dev: ## build orbyter-spark-dev
-	docker build -t orbyter-spark-dev orbyter-spark-dev
-
-release-spark-dev: ## tags git with orbyter-spark-dev-<VERSION> and pushes to github.
-	git tag orbyter-spark-dev-`cat orbyter-spark-dev/VERSION`
+release: ## Pushes version tag to Github, kicking off a build-and-push workflow. Requires `target=image-name` argument.
+	@:$(call check_defined, target, expected target='image-name')
+	@:$(call check_in_list, $(target))
+	git tag $(target)-`cat $(target)/VERSION`
 	git push --tags

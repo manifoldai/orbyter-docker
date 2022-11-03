@@ -1,37 +1,34 @@
-# manifoldai/orbyter-spark-dev:0.1
+# manifoldai/orbyter-spark-dev:4.1
 
-Dockerfile for [manifoldai/orbyter-spark-dev:0.1](https://hub.docker.com/r/manifoldai/orbyter-spark-dev)
+Dockerfile for [manifoldai/orbyter-spark-dev](https://hub.docker.com/r/manifoldai/orbyter-spark-dev)
 
 ## Usage
 
 To run a bash shell
 
-`docker run -it manifoldai/orbyter-spark-dev:0.1 bash`
+`docker run -it manifoldai/orbyter-spark-dev:4.1 bash`
 
 ## Image overview
 
-For a complete list all packages, run `pip freeze` in a container. For a summary of
-the useful packages for ML development, see [requirements.txt].
+For a complete list all packages, run `pip freeze` in a container. For a list of the useful packages for ML development, see [requirements.txt](requirements.txt).
 
 System:
 
-- Ubuntu 20.04 LTS
-- Python 3.8.5
-- Spark 3.1.1
-- Hadoop 2.7
+- Debian 11.2 "Bullseye"
+- Python 3.10.8
+- Spark, PySpark
+- Hadoop
 
 ## Release Notes:
 
-### 0.1.2
+The changes in this image should follow [orbyter-ml-dev](../orbyter-ml-dev/README.md) closely. Changes specific to this image should be noted below.
 
-The `orbyter-spark-dev:0.1` image will point to this release.
+### 4.1
 
-Updates `mlflow` to 1.23.1 for security patch.
+- Updated to Spark 3.3.1
+- Updated to Hadoop 3.3
 
 ### 0.1.1
 
-Updates `jupyterlab` to 3.0.17 for security patch.
-
-### 0.1
-
-Initial release.
+- Updated to Spark 3.1.1
+- Updated to Hadoop 2.7
