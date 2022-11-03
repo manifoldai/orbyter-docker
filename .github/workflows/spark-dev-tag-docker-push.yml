@@ -27,6 +27,7 @@ jobs:
         uses: docker/build-push-action@v3
         with:
           context: orbyter-spark-dev
+          platforms: linux/amd64,linux/arm64
           push: true
           tags: |
             manifoldai/orbyter-spark-dev:latest
