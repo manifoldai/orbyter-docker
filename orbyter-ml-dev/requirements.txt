@@ -12,7 +12,7 @@ dvc==2.31.0
 flake8==5.0.4
 graphviz==0.20.1
 ipdb==0.13.9
-ipython==8.5.0
+ipython==8.10.0
 isort==5.10.1
 jsonlines==3.1.0
 jupyter==1.0.0
