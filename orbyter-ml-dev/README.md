@@ -1,4 +1,4 @@
-# manifoldai/orbyter-ml-dev:4.1
+# manifoldai/orbyter-ml-dev:4.2
 
 Dockerfile for [manifoldai/orbyter-ml-dev](https://hub.docker.com/r/manifoldai/orbyter-ml-dev)
 
@@ -6,7 +6,7 @@ Dockerfile for [manifoldai/orbyter-ml-dev](https://hub.docker.com/r/manifoldai/o
 
 To run a bash shell
 
-`docker run -it manifoldai/orbyter-ml-dev:4.1 bash`
+`docker run -it manifoldai/orbyter-ml-dev:latest bash`
 
 ## Image overview
 
@@ -18,14 +18,14 @@ For a complete list all packages, run `pip freeze` in a container. For a list of
 - Python 3.10.8
 - ~~Node.js v16~~
 
-
-| Category | Notable packages |
-| -------- | ---------------- |
+| Category          | Notable packages                                                      |
+| ----------------- | --------------------------------------------------------------------- |
 | Programming tools | `black`, `flake8`, `isort`, `mypy`, `pytest`, `ipdb`, `line-profiler` |
-| AWS | `awscli`, `boto3` |
-| Numeric | `numpy`, `pandas` |
-| Visualization | `matplotlib`, `plotly`, `seaborn` |
-| ML | `lightgbm`, `scikit-learn`, `statsmodels`, `xgboost` |
+| AWS               | `awscli`, `boto3`                                                     |
+| Numeric           | `numpy`, `pandas`                                                     |
+| Visualization     | `matplotlib`, `plotly`, `seaborn`                                     |
+| ML                | `lightgbm`, `scikit-learn`, `statsmodels`, `xgboost`                  |
+
 | Deep learning:
 | NLP:
 | MLOps | `mlflow`, `dvc` |
@@ -36,9 +36,16 @@ For a complete list all packages, run `pip freeze` in a container. For a list of
 
 ## Release Notes:
 
-### 4.1
-Uses the base image `orbyter-base-sys:4.1`
+### 4.2
 
+Adds Jupyterlab collaboration packages:
+
+- `jupyter_server`
+- `jupyterlab-link-share`
+
+### 4.1
+
+Uses the base image `orbyter-base-sys:4.1`
 
 ### 4.0
 
@@ -50,10 +57,12 @@ Uses the base image `orbyter-base-sys:4.0`
 - Updated packages
 
 ##### New
+
 - Added `mypy` type stubs for all currently-installed packages that are in the [Typeshed](https://github.com/python/typeshed)
 - Added extension for auto-formatting Jupyter notebooks with `black` using the cell magic: `%load_ext lab_black`
 
 ##### Removed
+
 - Dask CloudProvider has been too slow to stay up-to-date and has ongoing issues with properly tearing down infrastructure.
 
 ### 3.5.5
@@ -108,12 +117,13 @@ Updated all Python packages.
 Updated all Python packages.
 
 ##### New
+
 Added `dvc==1.11.9` to `requirements.txt` to enable data versioning.
 
 Added `mypy==0.790` for static type checking.
 
-
 ### Image overview
+
 System:
 
 - Ubuntu 20.04 LTS
