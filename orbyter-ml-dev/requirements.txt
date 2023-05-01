@@ -23,7 +23,7 @@ jupyterlab-link-share==0.3.0
 lightgbm==3.3.5
 line-profiler==4.0.3
 matplotlib==3.7.1
-mlflow==2.2.2
+mlflow==2.3.1
 more-itertools==9.1.0
 mypy==1.1.1
 nb-black==1.0.7
