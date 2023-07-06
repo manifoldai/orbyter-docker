@@ -37,7 +37,7 @@ pytest==7.2.0
 python-dotenv==0.21.0
 pytictoc==1.5.2
 scikit-learn==1.1.2
-scipy==1.9.3
+scipy==1.10.0
 seaborn==0.12.1
 shap==0.41.0
 snakeviz==2.1.1
