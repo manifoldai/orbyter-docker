@@ -35,7 +35,7 @@ pandas-stubs==1.5.3.230321
 plotly==5.13.1
 pluggy==1.0.0
 psycopg==3.1.8
-pyarrow==11.0.0
+pyarrow==14.0.1
 pytest==7.2.2
 python-dotenv==1.0.0
 pytictoc==1.5.2
