@@ -1,7 +1,6 @@
 name: Publish base DL image
 
 on:
-  workflow_dispatch:
   push:
     tags:
       - orbyter-base-sys-dl-[0-9].*

@@ -1,10 +1,7 @@
 name: Publish base image
 
 on:
-  workflow_dispatch:
   push:
-    branches:
-      - gg/4.2-update
     tags:
       - orbyter-base-sys-[0-9].*
 

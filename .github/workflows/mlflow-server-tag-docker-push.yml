@@ -1,7 +1,6 @@
 name: Publish MLFlow image
 
 on:
-  workflow_dispatch:
   push:
     tags:
       - orbyter-mlflow-server-[0-9].*

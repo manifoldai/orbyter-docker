@@ -1,7 +1,6 @@
 name: Publish ML dev image
 
 on:
-  workflow_dispatch:
   push:
     tags:
       - orbyter-ml-dev-[0-9].*

@@ -1,7 +1,6 @@
 name: Publish DL dev image
 
 on:
-  workflow_dispatch:
   push:
     tags:
       - orbyter-dl-dev-[0-9].*

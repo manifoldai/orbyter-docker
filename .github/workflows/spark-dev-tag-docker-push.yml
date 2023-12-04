@@ -1,7 +1,6 @@
 name: Publish Spark image
 
 on:
-  workflow_dispatch:
   push:
     tags:
       - orbyter-spark-dev-[0-9].*
