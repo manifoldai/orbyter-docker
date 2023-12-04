@@ -1,4 +1,4 @@
-FROM manifoldai/orbyter-base-sys:4.1
+FROM manifoldai/orbyter-base-sys:4.2
 COPY . /build
 WORKDIR /build
 

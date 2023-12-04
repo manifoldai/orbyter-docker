@@ -1,4 +1,4 @@
-# manifoldai/orbyter-ml-dev:4.2
+# manifoldai/orbyter-ml-dev:4.2.1
 
 Dockerfile for [manifoldai/orbyter-ml-dev](https://hub.docker.com/r/manifoldai/orbyter-ml-dev)
 
@@ -15,7 +15,7 @@ For a complete list all packages, run `pip freeze` in a container. For a list of
 ### System:
 
 - Debian 11.2 "Bullseye"
-- Python 3.10.8
+- Python 3.11.6
 - ~~Node.js v16~~
 
 | Category          | Notable packages                                                      |
@@ -23,7 +23,7 @@ For a complete list all packages, run `pip freeze` in a container. For a list of
 | Programming tools | `black`, `flake8`, `isort`, `mypy`, `pytest`, `ipdb`, `line-profiler` |
 | AWS               | `awscli`, `boto3`                                                     |
 | Numeric           | `numpy`, `pandas`                                                     |
-| Visualization     | `matplotlib`, `plotly`, `seaborn`                                     |
+| Visualization     | `matplotlib`, `plotly`                                                |
 | ML                | `lightgbm`, `scikit-learn`, `statsmodels`, `xgboost`                  |
 
 | Deep learning:
@@ -35,6 +35,11 @@ For a complete list all packages, run `pip freeze` in a container. For a list of
 ---
 
 ## Release Notes:
+
+
+### 4.2.1
+
+Uses the base image `orbyter-base-sys:4.2`
 
 ### 4.2
 

@@ -10,6 +10,11 @@ docker run -e MLFLOW_TRACKING_URI -e MLFLOW_ARTIFACT_LOCATION -it manifoldai/orb
 
 ## Release Notes:
 
+### 2.0
+
+- Uses the base image `orbyter-base-sys:4.2`
+- Updates mlflow to 2.8.1 for security reasons
+
 ### 1.15.1
 
 The image for `orbyter-mlflow-server:1.15` will point to this patched version.

@@ -1,5 +1,5 @@
-# orbyter-ml-dev:4.1
-FROM manifoldai/orbyter-base-sys:4.1
+# orbyter-ml-dev:4.2
+FROM manifoldai/orbyter-base-sys:4.2
 COPY . /build
 WORKDIR /build
 RUN apt-get update -qq && \

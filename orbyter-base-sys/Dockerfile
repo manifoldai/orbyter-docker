@@ -1,5 +1,5 @@
-# orbyter-base-sys:4.1
-FROM python:3.10.8-slim-bullseye
+# orbyter-base-sys:4.2
+FROM python:3.11.6-slim-bullseye
 WORKDIR /build
 ENV LC_ALL=C.UTF-8 \
     LANG=C.UTF-8 \
