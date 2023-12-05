@@ -27,7 +27,7 @@ RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && \
 # Install python
 RUN apt install software-properties-common -y && \
     add-apt-repository ppa:deadsnakes/ppa && \
-    apt install python3.10 -y && \
+    apt install python3.11 -y && \
     apt install python3-pip -y && \
     apt install python-is-python3 -y
 # Cleanup

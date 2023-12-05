@@ -13,6 +13,10 @@ To run a bash shell
 
 The changes in this image should follow [orbyter-ml-dev](../orbyter-ml-dev/README.md) closely. Changes specific to the DL image (including the base NVIDIA image) should be noted below.
 
+### 4.2.1
+
+- Updated to Python 3.11
+
 ### 4.2
 
 Adds Jupyterlab collaboration packages:
@@ -23,10 +27,10 @@ Adds Jupyterlab collaboration packages:
 ### 4.1
 
 - Updated NVIDIA base image to Ubuntu 22.04, CUDA 11.8
-- Updated Python to 3.10
+- Updated to Python 3.10
 
 ### 3.2
 
 - Updated NVIDIA base image to Ubuntu 20.04, CUDA 11.2.1
-- Updated Python to 3.8
+- Updated to Python 3.8
 
