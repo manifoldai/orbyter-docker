@@ -26,7 +26,7 @@ matplotlib==3.8.2
 mlflow==2.8.1
 more-itertools==10.1.0
 mypy==1.7.1
-nb-black==1.0.7
+nb-black==1.0.5
 notebook==7.0.6
 numba==0.58.1
 numpy==1.26.2
