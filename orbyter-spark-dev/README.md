@@ -16,6 +16,8 @@ for information about the system or packages. Additional changes specific to thi
 ### 5.0.0
 
 - Use shared `requirements` file
+- Update Spark to 3.3.3
+- Update spark-nlp to 5.1.4
 
 ### 4.1
 

@@ -1,0 +1,71 @@
+name: Publish Docker image
+
+on:
+  push:
+    tags:
+      - orbyter-base-sys-[0-9].*
+      - orbyter-base-sys-dl-[0-9].*
+      - orbyter-ml-dev-[0-9].[0-9].*
+      - orbyter-dl-dev-[0-9].[0-9].*
+      - orbyter-spark-dev-[0-9].[0-9].*
+
+jobs:
+  push_to_registry:
+    name: Push Docker image to Dockerhub
+
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Check out the repo
+        uses: actions/checkout@v4
+
+      - name: Get version
+        id: get_version
+        run: |
+          TAG_NAME=${GITHUB_REF#refs/tags/}
+          BASE=$(echo "$TAG_NAME" | rev | cut -d '-' -f2- | rev)
+          VERSION=$(echo "$TAG_NAME" | rev | cut -d '-' -f1 | rev)
+          echo "BASE::$BASE" >> $GITHUB_OUTPUT
+          echo "VERSION::$VERSION" >> $GITHUB_OUTPUT
+          if [[ "$BASE" == "orbyter-base-sys-dl" || "$BASE" == "orbyter-dl-dev" ]]; then
+            echo "PLATFORMS::linux/amd64" >> $GITHUB_OUTPUT
+          else
+            echo "PLATFORMS::linux/amd64,linux/arm64" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Echo version
+        id: echo_version
+        run: |
+            echo ${{ steps.get_version.outputs.BASE }}
+            echo ${{ steps.get_version.outputs.VERSION }}
+            echo ${{ steps.get_version.outputs.PLATFORMS }}
+
+      - name: Set up QEMU
+        uses: docker/setup-qemu-action@v2
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v2
+        
+      - name: Login to Docker Hub
+        uses: docker/login-action@v2
+        with:
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
+
+      - name: Build and push
+        uses: docker/build-push-action@v3
+        with:
+          context: ${{ steps.get_version.outputs.BASE }}
+          platforms: ${{ steps.get_version.outputs.PLATFORMS }}
+          push: true
+          tags: |
+            manifoldai/${{ steps.get_version.outputs.BASE }}:latest
+            manifoldai/${{ steps.get_version.outputs.BASE }}:${{ steps.get_version.outputs.VERSION }}
+
+      - name: Docker Hub Description
+        uses: peter-evans/dockerhub-description@v3
+        with:
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
+          repository: manifoldai/${{ steps.get_version.outputs.BASE }}
+          readme-filepath: ./${{ steps.get_version.outputs.BASE }}/OVERVIEW.md

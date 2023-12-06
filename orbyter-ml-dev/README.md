@@ -25,12 +25,11 @@ For a complete list all packages, run `pip freeze` in a container. For a list of
 | Numeric           | `numpy`, `pandas`                                                     |
 | Visualization     | `matplotlib`, `plotly`                                                |
 | ML                | `lightgbm`, `scikit-learn`, `statsmodels`, `xgboost`                  |
-
-| Deep learning:
-| NLP:
-| MLOps | `mlflow`, `dvc` |
-| Documentation | `Sphinx` |
-| Other | `Dask`, `streamlit` |
+| Deep learning:    |                                                                       |
+| NLP:              |                                                                       |
+| MLOps             | `mlflow`, `dvc`                                                       |
+| Documentation     | `Sphinx`                                                              |
+| Other             | `Dask`, `streamlit`                                                   |
 
 ---
 

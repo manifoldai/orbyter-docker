@@ -1,4 +1,4 @@
-# orbyter-base-sys:4.2
+# orbyter-base-sys
 FROM python:3.11.6-slim-bullseye
 
 WORKDIR /build

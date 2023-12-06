@@ -4,6 +4,10 @@ Dockerfile for [manifoldai/orbyter-base-sys](https://hub.docker.com/r/manifoldai
 
 ## Release Notes
 
+### 5.0
+
+- Moderate repo refactor
+
 ### 4.2
 
 - Updated Python to 3.11.6
