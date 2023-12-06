@@ -1,4 +1,4 @@
-# manifoldai/orbyter-base-sys:4.2
+# manifoldai/orbyter-base-sys
 
 Dockerfile for [manifoldai/orbyter-base-sys](https://hub.docker.com/r/manifoldai/orbyter-base-sys)
 

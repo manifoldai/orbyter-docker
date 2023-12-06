@@ -3,7 +3,7 @@ name: Publish DL dev image
 on:
   push:
     tags:
-      - orbyter-dl-dev-[0-9].*
+      - orbyter-dl-dev-[0-9].[0-9].*
 
 jobs:
   push_to_registry:

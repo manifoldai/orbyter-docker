@@ -1,4 +1,4 @@
-# manifoldai/orbyter-spark-dev:4.2
+# manifoldai/orbyter-spark-dev
 
 Dockerfile for [manifoldai/orbyter-spark-dev](https://hub.docker.com/r/manifoldai/orbyter-spark-dev)
 
@@ -8,20 +8,14 @@ To run a bash shell
 
 `docker run -it manifoldai/orbyter-spark-dev:4.2 bash`
 
-## Image overview
+## Release Notes
 
-For a complete list all packages, run `pip freeze` in a container. For a list of the useful packages for ML development, see [requirements.txt](requirements.txt).
+The changes in this image follow [orbyter-ml-dev](../orbyter-ml-dev/README.md) closely. See that directory or [orbyter-base-sys](../orbyter-base-sys/README.md)
+for information about the system or packages. Additional changes specific to this image are noted below.
 
-System:
+### 5.0.0
 
-- Debian 11.2 "Bullseye"
-- Python 3.11.6
-- Spark, PySpark
-- Hadoop
-
-## Release Notes:
-
-The changes in this image should follow [orbyter-ml-dev](../orbyter-ml-dev/README.md) closely. Additional changes specific to this image should be noted below.
+- Use shared `requirements` file
 
 ### 4.1
 

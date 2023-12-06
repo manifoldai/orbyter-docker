@@ -3,7 +3,7 @@ name: Publish Spark image
 on:
   push:
     tags:
-      - orbyter-spark-dev-[0-9].*
+      - orbyter-spark-dev-[0-9].[0-9].*
 
 jobs:
   push_to_registry:

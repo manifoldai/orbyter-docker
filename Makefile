@@ -7,7 +7,6 @@ TARGETS := \
 	orbyter-base-sys-dl \
 	orbyter-dl-dev \
 	orbyter-ml-dev \
-	orbyter-mlflow-server \
 	orbyter-spark-dev 
 
 check_defined = $(strip $(foreach 1,$1, $(call __check_defined,$1,$(strip $(value 2)))))
