@@ -25,12 +25,12 @@ jobs:
           TAG_NAME=${GITHUB_REF#refs/tags/}
           BASE=$(echo "$TAG_NAME" | rev | cut -d '-' -f2- | rev)
           VERSION=$(echo "$TAG_NAME" | rev | cut -d '-' -f1 | rev)
-          echo "BASE::$BASE" >> $GITHUB_OUTPUT
-          echo "VERSION::$VERSION" >> $GITHUB_OUTPUT
+          echo "BASE=$BASE" >> $GITHUB_OUTPUT
+          echo "VERSION=$VERSION" >> $GITHUB_OUTPUT
           if [[ "$BASE" == "orbyter-base-sys-dl" || "$BASE" == "orbyter-dl-dev" ]]; then
-            echo "PLATFORMS::linux/amd64" >> $GITHUB_OUTPUT
+            echo "PLATFORMS=linux/amd64" >> $GITHUB_OUTPUT
           else
-            echo "PLATFORMS::linux/amd64,linux/arm64" >> $GITHUB_OUTPUT
+            echo "PLATFORMS=linux/amd64,linux/arm64" >> $GITHUB_OUTPUT
           fi
 
       - name: Echo version
