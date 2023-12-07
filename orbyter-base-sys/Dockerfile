@@ -1,10 +1,13 @@
-# orbyter-base-sys:4.2
+# orbyter-base-sys
 FROM python:3.11.6-slim-bullseye
+
 WORKDIR /build
+
 ENV LC_ALL=C.UTF-8 \
     LANG=C.UTF-8 \
     TZ=America/Los_Angeles
 # The time zone avoids prompts during cmake install
+
 RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && \
     echo $TZ > /etc/timezone && \
     apt-get update -qq && \
@@ -28,5 +31,6 @@ RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && \
     rm -rf /var/lib/apt/lists/* && \
     rm -rf ~/.cache && \
     rm -rf /build/*
+
 WORKDIR /
 RUN rm -rf /build

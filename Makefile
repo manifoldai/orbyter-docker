@@ -7,7 +7,6 @@ TARGETS := \
 	orbyter-base-sys-dl \
 	orbyter-dl-dev \
 	orbyter-ml-dev \
-	orbyter-mlflow-server \
 	orbyter-spark-dev 
 
 check_defined = $(strip $(foreach 1,$1, $(call __check_defined,$1,$(strip $(value 2)))))
@@ -18,7 +17,7 @@ check_in_list = $(if $(filter $(TARGETS), $1),, $(error `target`$1 is not a vali
 build: ## Builds a Docker image locally. Requires `target=image-name` argument.
 	@:$(call check_defined, target, expected target='image-name')
 	@:$(call check_in_list, $(target))
-	docker build -t $(target) $(target)
+	docker build -t $(target) -f $(target)/Dockerfile .
 
 
 release: ## Pushes version tag to Github, kicking off a build-and-push workflow. Requires `target=image-name` argument.
