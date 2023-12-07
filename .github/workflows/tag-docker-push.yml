@@ -55,7 +55,7 @@ jobs:
       - name: Build and push
         uses: docker/build-push-action@v3
         with:
-          file: ${{ steps.get_version.outputs.BASE }})/Dockerfile
+          file: ${{ steps.get_version.outputs.BASE }}/Dockerfile
           context: .
           platforms: ${{ steps.get_version.outputs.PLATFORMS }}
           push: true
