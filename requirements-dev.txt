@@ -1,6 +1,6 @@
 awscli==1.31.6
 bayesian-optimization==1.4.1
-black==23.11.0
+black==24.3.0
 boto3==1.33.6
 click==8.1.7
 coloredlogs==15.0.1
